@@ -10,7 +10,6 @@ import initFuncionamento from './modules/funcionamento.js'
 import initFetchAnimais from './modules/fecth-animais.js'
 import initFetchBitcoins from './modules/fecth-bitcoin.js'
 
-
 initScrollSuave();
 initAnimacaoScroll();
 initAccordion();

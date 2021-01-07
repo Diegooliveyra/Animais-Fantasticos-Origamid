@@ -8,7 +8,7 @@ export default function initAnimaNumeros() {
       let start = 0;
 
       const timer = setInterval(() => {
-        start = start + incremento;
+        start += incremento;
         numero.innerText = start;
         if (start > total) {
           numero.innerText = total;
@@ -18,14 +18,15 @@ export default function initAnimaNumeros() {
     });
   }
 
+  let obsover;
+
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains("ativo")) {
       obsover.disconnect();
       animaNumeros();
     }
   }
+  obsover = new MutationObserver(handleMutation);
   const observeTarget = document.querySelector(".numeros");
-  const obsover = new MutationObserver(handleMutation);
-
   obsover.observe(observeTarget, { attributes: true });
 }
