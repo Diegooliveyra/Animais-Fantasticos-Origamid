@@ -1,0 +1,24 @@
+{
+  "name": "curso-javascript-origamid",
+  "version": "1.0.0",
+  "description": "Projeto curso Javascript Origamid",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegooliveyra/Curso-Javascript-Origamid.git"
+  },
+  "author": "Diego Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diegooliveyra/Curso-Javascript-Origamid/issues"
+  },
+  "homepage": "https://github.com/Diegooliveyra/Curso-Javascript-Origamid#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
