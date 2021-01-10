@@ -16,7 +16,6 @@ const accordion = new Accordion('[data-anime="accordion"] dt')
 scrollSuave.init()
 accordion.init()
 
-console.log(accordion.init())
 
 initAnimacaoScroll();
 
