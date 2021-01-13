@@ -3,24 +3,39 @@ export default class Scrollanima {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
 
-    this.animaScroll = this.animaScroll.bind(this)
+    this.checkdistance = this.checkdistance.bind(this);
   }
-  
 
-  animaScroll() {
-    this.sections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const isSectionVisible = sectionTop - this.windowMetade < 0;
-      if (isSectionVisible) section.classList.add("ativo");
-      else if (section.classList.contains("ativo")) {
-        section.classList.remove("ativo");
+  // pega a distancia de casa item 
+  // em relação ao topo do site
+  getDistance() {
+    this.distance = [...this.sections].map((section) => {
+      const offset = section.offsetTop;
+      return {
+        element: section,
+        offset: Math.floor(offset - this.windowMetade),
+      };
+    });
+  }
+
+  // Verifica a distancia de casa objero
+  // em relação ao scroll do site
+  checkdistance() {
+    this.distance.forEach((item) => {
+      if (window.pageYOffset > item.offset) {
+        item.element.classList.add("ativo");
+      } else if (item.element.classList.contains("ativo")) {
+        item.element.classList.remove("ativo");
       }
     });
   }
 
-  init(){
-    this.animaScroll()
-    window.addEventListener("scroll", this.animaScroll);
+  init() {
+    if (this.sections.length) {
+      this.getDistance();
+      this.checkdistance();
+      window.addEventListener("scroll", this.checkdistance);
+    }
+    return this;
   }
-  
 }
