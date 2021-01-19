@@ -45,7 +45,7 @@ $ index.html
 ```
 
 </br>
-<h3 align="center"><a href="#" target="_blank">🚀 Link do Projeto 🚀</a></h3>
+<h3 align="center"><a href="https://animais-fantasticos-origamid.netlify.app/" target="_blank">🚀 Link do Projeto 🚀</a></h3>
 </br>
 
 <h3>🖼 Layout</h3>
